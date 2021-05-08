@@ -1,11 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import styled from "styled-components";
+import { COLORS } from "./constants";
 const Header = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return <Wrapper></Wrapper>;
+};
 
-export default Header
+const Wrapper = styled.div`
+  height: 10vh;
+  background-color: ${COLORS.primary};
+  width: 100vw;
+`;
+export default Header;

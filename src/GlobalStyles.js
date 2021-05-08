@@ -12,6 +12,7 @@ ul{
     padding:0;
     border:0;
     vertical-align:baseline;
+    font-family: 'Karla', sans-serif;
 }
 
 

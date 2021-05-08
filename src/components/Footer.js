@@ -1,11 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import styled from "styled-components";
+import Logo from "../assets/maket.png";
 const Footer = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <Wrapper>
+      <Text>Powered by</Text>
+      <Image src={Logo} />
+    </Wrapper>
+  );
+};
 
-export default Footer
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 20px;
+`;
+const Text = styled.h4``;
+const Image = styled.img`
+  height: 40px;
+  width: 40px;
+  padding-left: 20px;
+`;
+export default Footer;

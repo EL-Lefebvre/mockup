@@ -8,9 +8,12 @@ import Lands from "./Lands";
 import ModelPage from "./HomeFilter/ModelPage";
 import Meeting from "./Meeting";
 import Confirm from "./Confirm";
+import SideBar from "./SideBar";
+import Footer from "./Footer";
 const Body = () => {
   return (
     <Wrapper>
+      <SideBar />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -40,6 +43,6 @@ const Body = () => {
 };
 
 const Wrapper = styled.div`
-  width: 50vw;
+  display: flex;
 `;
 export default Body;

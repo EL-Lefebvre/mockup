@@ -4,14 +4,17 @@ import Body from "./Body";
 import SideBar from "./SideBar";
 import styled from "styled-components";
 import GlobalStyles from "../GlobalStyles";
+import Header from "./Header";
+import Footer from "./Footer";
 import { createBrowserHistory } from "history";
 const App = () => {
   const historyInstance = createBrowserHistory();
   return (
     <Router history={historyInstance}>
       <Wrapper>
-        <SideBar />
+        <Header />
         <Body />
+        <Footer />
       </Wrapper>
       <GlobalStyles />
     </Router>
@@ -20,6 +23,6 @@ const App = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 export default App;
