@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 import { COLORS } from "./constants";
 import { NavLink } from "react-router-dom";
 import { BiCalendarCheck as Start } from "react-icons/bi";
@@ -11,6 +12,14 @@ import { FaHandsHelping as Meet } from "react-icons/fa";
 import { GiPartyPopper as Done } from "react-icons/gi";
 
 const SideBar = () => {
+  const history = useLocation();
+  console.log(history.pathname);
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    const path = history.pathname;
+  }, [history]);
+  console.log(toggle);
   return (
     <Wrapper>
       <Main>
@@ -20,37 +29,73 @@ const SideBar = () => {
           </Nav>
         </List>
         <List>
-          <Nav to="/needs">
+          <Nav
+            to="/needs"
+            style={{
+              color:
+                history.pathname === "/needs" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Needs size={30} /> <Text> 1. Your needs</Text>
           </Nav>
         </List>
 
         <List>
-          <Nav to="/budget">
+          <Nav
+            to="/budget"
+            style={{
+              color:
+                history.pathname === "/budget" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Budget size={30} />
             <Text> 2. Your budget </Text>
           </Nav>
         </List>
         <List>
-          <Nav to="/lands">
+          <Nav
+            to="/lands"
+            style={{
+              color:
+                history.pathname === "/lands" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Location size={30} />
             <Text> 3. Our lands </Text>
           </Nav>
         </List>
         <List>
-          <Nav to="/models">
+          <Nav
+            to="/models"
+            style={{
+              color:
+                history.pathname === "/models" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Home size={30} />
             <Text> 4. Our Models </Text>
           </Nav>
         </List>
         <List>
-          <Nav to="/meeting">
+          <Nav
+            to="/meeting"
+            style={{
+              color:
+                history.pathname === "/meeting" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Meet size={30} />
             <Text> 5. Meeting </Text>
           </Nav>
         </List>
         <List>
-          <Nav to="/confirm">
+          <Nav
+            to="/confirm"
+            style={{
+              color:
+                history.pathname === "/confirm" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Done size={30} />
           </Nav>
         </List>
@@ -63,7 +108,7 @@ const Wrapper = styled.div`
   text-decoration: none;
 
   height: 100vh;
-  width: 20vw;
+
   justify-content: center;
   padding-left: 20px;
   padding-top: 30px;
@@ -78,6 +123,7 @@ const Nav = styled(NavLink)`
   align-items: center;
   padding: 10px;
   text-decoration: none;
+  width: 20vw;
   color: black;
   &:active {
     color: ${COLORS.third};

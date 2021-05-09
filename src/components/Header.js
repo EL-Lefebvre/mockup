@@ -8,6 +8,5 @@ const Header = () => {
 const Wrapper = styled.div`
   height: 10vh;
   background-color: ${COLORS.primary};
-  width: 100vw;
 `;
 export default Header;

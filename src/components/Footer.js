@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 20px;
+  z-index: 1;
 `;
 const Text = styled.h4``;
 const Image = styled.img`

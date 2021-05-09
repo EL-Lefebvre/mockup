@@ -4,53 +4,56 @@ import { COLORS } from "../constants";
 import { FaShower as Bathroom } from "react-icons/fa";
 import { RiHotelBedFill as Bedroom } from "react-icons/ri";
 import { RiPriceTag3Line as Price } from "react-icons/ri";
-const HouseCard = ({houseData}) => {
-
+const HouseCard = ({ filteredData }) => {
   return (
     <Wrapper>
       <Main>
         <Text>What we found for you: </Text>
       </Main>
       <List>
-        {houseData && houseData.map((house) => {
-          return (
-            <Card>
-              <ImageDiv>
-                <Image src={house.src} />
-              </ImageDiv>
-              <SubDiv>
-                <TextDiv>
-                  <h3> {house.name} </h3>
-                </TextDiv>
-                <Details>
-                  <DetailsDiv>
-                    <Bathroom size={20} color={COLORS.secondary} />
-                    <Number>{house.nbr_bedrooms}</Number>
-                  </DetailsDiv>
-                  <DetailsDiv>
-                    <Bedroom size={20} color={COLORS.secondary} />
-                    <Number>{house.nbr_bathrooms}</Number>
-                  </DetailsDiv>
-                  <DetailsDiv>
-                    <Price size={20} color={COLORS.secondary} />
-                    <Number>{house.price}</Number>
-                  </DetailsDiv>
-                </Details>
-                <ButtonDiv>
-                  <Button>Select</Button>
-                  <Button>See Project</Button>
-                </ButtonDiv>
-              </SubDiv>
-            </Card>
-          );
-        })}
+        {filteredData ? (
+          filteredData.map((house) => {
+            return (
+              <Card key={house.name}>
+                <ImageDiv>
+                  <Image src={house.src} />
+                </ImageDiv>
+                <SubDiv>
+                  <TextDiv>
+                    <h3> {house.name} </h3>
+                  </TextDiv>
+                  <Details>
+                    <DetailsDiv>
+                      <Bathroom size={20} color={COLORS.secondary} />
+                      <Number>{house.nbr_bedrooms}</Number>
+                    </DetailsDiv>
+                    <DetailsDiv>
+                      <Bedroom size={20} color={COLORS.secondary} />
+                      <Number>{house.nbr_bathrooms}</Number>
+                    </DetailsDiv>
+                    <DetailsDiv>
+                      <Price size={20} color={COLORS.secondary} />
+                      <Number>{house.price}</Number>
+                    </DetailsDiv>
+                  </Details>
+                  <ButtonDiv>
+                    <Button>Select</Button>
+                    <Button>See Project</Button>
+                  </ButtonDiv>
+                </SubDiv>
+              </Card>
+            );
+          })
+        ) : (
+          <div>No results</div>
+        )}
       </List>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  width: 65vw;
+  width: 60vw;
 `;
 const Main = styled.div``;
 const TextDiv = styled.div`
@@ -63,6 +66,7 @@ const List = styled.div`
   overflow: auto;
   height: 70vh;
   margin: 20px;
+  max-height: 60vh;
 `;
 const Text = styled.div`
   font-weight: bolder;

@@ -3,7 +3,8 @@ import styled from "styled-components";
 import HouseCard from "./HouseCard";
 import Filter from "./Filter";
 import houseData from "../../data/model";
-import HouseLogo from "../../assets/house.svg";
+import { BsHouseFill as Home } from "react-icons/bs";
+import Main from "../Main";
 import { COLORS } from "../constants";
 const ModelPage = () => {
   const [price, setPrice] = useState(0);
@@ -11,30 +12,37 @@ const ModelPage = () => {
   const [bedrooms, setBedrooms] = useState(0);
   const [surface, setSurface] = useState(0);
   const [filteredData, setFilteredData] = useState([]);
-  useEffect(() => {
-    const filteredResults = houseData.map((data) => {
-      if (price < data.price) {
-        return data;
-      }
-    });
-    setFilteredData(filteredResults);
-    console.log(filteredResults);
-  }, [price]);
-  console.log(filteredData);
-  return (
-    <Wrapper>
-      <Header>
-        <Text>
-          Our Models <img src={HouseLogo} width="25" />
-        </Text>
 
-        <Button>
-          {" "}
-          <img src={HouseLogo} width="20" />
-          My project
-        </Button>
-      </Header>
-      <Main>
+  useEffect(() => {
+    const filteredResults = houseData.filter(
+      (data) => bedrooms <= data.nbr_bedrooms
+    );
+    setFilteredData(filteredResults);
+  }, [bedrooms]);
+
+  useEffect(() => {
+    const filteredResults = houseData.filter(
+      (data) => bathrooms <= data.nbr_bathrooms
+    );
+    setFilteredData(filteredResults);
+  }, [bathrooms]);
+
+  useEffect(() => {
+    const filteredResults = houseData.filter((data) => surface <= data.surface);
+    setFilteredData(filteredResults);
+  }, [surface]);
+
+  useEffect(() => {
+    const filteredResults = houseData.filter((data) => price <= data.price);
+    setFilteredData(filteredResults);
+  }, [price]);
+
+  return (
+    <Main
+      title={"Our Models"}
+      imageSrc={<Home size={30} fill={`${COLORS.third}`} />}
+    >
+      <Wrapper>
         <Filter
           price={price}
           setPrice={setPrice}
@@ -46,39 +54,15 @@ const ModelPage = () => {
           setSurface={setSurface}
         />
 
-        <HouseCard houseData={houseData} />
-      </Main>
-    </Wrapper>
+        <HouseCard filteredData={filteredData} />
+      </Wrapper>
+    </Main>
   );
 };
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const Main = styled.div`
+  padding-top: 50px;
   display: flex;
   align-items: center;
 `;
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  width: 70vw;
-  justify-content: space-between;
-`;
-const Button = styled.button`
-  border: 1px solid ${COLORS.primary};
-  background-color: ${COLORS.primary};
-  color: white;
-  border-radius: 10px;
-  height: 30px;
-  width: 120px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-const Text = styled.h2`
-  color: ${COLORS.primary};
-  font-weight: bolder;
-`;
-const Image = styled.img``;
+
 export default ModelPage;

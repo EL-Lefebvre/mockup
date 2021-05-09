@@ -9,6 +9,7 @@ import ModelPage from "./FilterPage/ModelPage";
 import Meeting from "./Meeting";
 import Confirm from "./Confirm";
 import SideBar from "./SideBar";
+import Main from "./Main";
 import Footer from "./Footer";
 const Body = () => {
   return (
