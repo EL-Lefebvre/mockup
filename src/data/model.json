@@ -1,0 +1,50 @@
+[
+  {
+    "name": "M-001",
+    "nbr_bedrooms": 3,
+    "nbr_bathrooms": 2,
+    "surface": 3456,
+    "price": 200000,
+    "src": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "name": "M-002",
+    "nbr_bedrooms": 1,
+    "nbr_bathrooms": 1,
+    "surface": 1006,
+    "price": 75000,
+    "src": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "name": "M-003",
+    "nbr_bedrooms": 5,
+    "nbr_bathrooms": 3,
+    "surface": 34356,
+    "price": 1200000,
+    "src": "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "name": "M-004",
+    "nbr_bedrooms": 2,
+    "nbr_bathrooms": 2,
+    "surface": 20356,
+    "price": 245000,
+    "src": "https://images.unsplash.com/photo-1576941089067-2de3c901e126?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60g"
+  },
+  {
+    "name": "M-005",
+    "nbr_bedrooms": 4,
+    "nbr_bathrooms": 2,
+    "surface": 12456,
+    "price": 500000,
+    "src": "https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "name": "M-006",
+    "nbr_bedrooms": 3,
+    "nbr_bathrooms": 2,
+    "surface": 8456,
+    "price": 222000,
+    "src": "https://images.unsplash.com/photo-1562182384-08115de5ee97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80"
+  }
+]

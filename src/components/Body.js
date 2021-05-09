@@ -5,7 +5,7 @@ import Home from "./Home";
 import Needs from "./Needs";
 import Budget from "./Budget";
 import Lands from "./Lands";
-import ModelPage from "./HomeFilter/ModelPage";
+import ModelPage from "./FilterPage/ModelPage";
 import Meeting from "./Meeting";
 import Confirm from "./Confirm";
 import SideBar from "./SideBar";

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "./constants";
 import { NavLink } from "react-router-dom";
 import { BiCalendarCheck as Start } from "react-icons/bi";
-
 import { BiNotepad as Needs } from "react-icons/bi";
 import { FaMoneyBillAlt as Budget } from "react-icons/fa";
 import { IoLocationSharp as Location } from "react-icons/io5";
@@ -80,7 +80,10 @@ const Nav = styled(NavLink)`
   text-decoration: none;
   color: black;
   &:active {
-    color: yellow;
+    color: ${COLORS.third};
+  }
+  &:selected {
+    color: ${COLORS.third};
   }
 `;
 export default SideBar;

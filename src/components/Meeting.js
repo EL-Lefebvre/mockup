@@ -4,7 +4,5 @@ const Meeting = () => {
   return <Wrapper>Meeting</Wrapper>;
 };
 
-const Wrapper = styled.div`
-  background-color: red;
-`;
+const Wrapper = styled.div``;
 export default Meeting;
