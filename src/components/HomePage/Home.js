@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Landing from "../assets/landing.webp";
-import Maket from "../assets/maket.png";
+import Landing from "../../assets/landing.webp";
+import Maket from "../../assets/maket.png";
 import { useHistory } from "react-router-dom";
 import Start from "./Start";
 const Home = () => {

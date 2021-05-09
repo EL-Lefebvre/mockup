@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Main from "./Main";
+import Main from "../MainPage/Main";
 import { IoLocationSharp as Location } from "react-icons/io5";
 const Lands = () => {
   return (
