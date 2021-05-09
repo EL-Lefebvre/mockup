@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Main from "./Main";
+import Main from "../MainPage/Main";
 import { FaHandsHelping as Meet } from "react-icons/fa";
-import { COLORS } from "./constants";
+import { COLORS } from "../constants";
 const Start = () => {
   return (
     <Wrapper>

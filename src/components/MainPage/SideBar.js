@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
-import { COLORS } from "./constants";
+import { COLORS } from "../constants";
 import { NavLink } from "react-router-dom";
 import { BiCalendarCheck as Start } from "react-icons/bi";
 import { BiNotepad as Needs } from "react-icons/bi";

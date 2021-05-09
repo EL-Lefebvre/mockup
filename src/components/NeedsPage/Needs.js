@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Main from "./Main";
+import Main from "../MainPage/Main";
 import { BiNotepad as NeedsLogo } from "react-icons/bi";
-import { COLORS } from "./constants";
+import { COLORS } from "../constants";
 const Needs = () => {
   return (
     <Main

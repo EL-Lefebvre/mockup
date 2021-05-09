@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HouseLogo from "../assets/house.svg";
-import { COLORS } from "./constants";
+import { COLORS } from "../constants";
 const Main = ({ title, imageSrc, children }) => {
   return (
     <Wrapper>

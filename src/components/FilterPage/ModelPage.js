@@ -4,7 +4,7 @@ import HouseCard from "./HouseCard";
 import Filter from "./Filter";
 import houseData from "../../data/model";
 import { BsHouseFill as Home } from "react-icons/bs";
-import Main from "../Main";
+import Main from "../MainPage/Main";
 import { COLORS } from "../constants";
 const ModelPage = () => {
   const [price, setPrice] = useState(0);

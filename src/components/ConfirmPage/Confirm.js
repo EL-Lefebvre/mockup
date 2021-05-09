@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Main from "./Main";
+import Main from "./MainPage/Main";
 import { GiPartyPopper as Done } from "react-icons/gi";
 import { COLORS } from "./constants";
 const Confirm = () => {

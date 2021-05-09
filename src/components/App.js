@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import Body from "./Body";
-import SideBar from "./SideBar";
+import Body from "./MainPage/Body";
+import SideBar from "./MainPage/SideBar";
 import styled from "styled-components";
 import GlobalStyles from "../GlobalStyles";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./MainPage/Header";
+import Footer from "./MainPage/Footer";
 import { createBrowserHistory } from "history";
 const App = () => {
   const historyInstance = createBrowserHistory();
