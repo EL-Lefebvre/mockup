@@ -19,7 +19,7 @@ const Filter = ({
 
           <Slider
             type="range"
-            min="1"
+            min="0"
             max="10"
             value={bedrooms}
             onChange={(ev) => setBedrooms(ev.target.value)}
@@ -30,30 +30,32 @@ const Filter = ({
 
           <Slider
             type="range"
-            min="1"
+            min="0"
             max="10"
             value={bathrooms}
             onChange={(ev) => setBathrooms(ev.target.value)}
           />
         </List>
         <List>
-          <Text>Price Range: {price}</Text>
+          <Text>Price Range: {price} $</Text>
 
           <Slider
             type="range"
-            min="1"
+            min="0"
             max="1000000"
+            step="10000"
             value={price}
             onChange={(ev) => setPrice(ev.target.value)}
           />
         </List>
         <List>
-          <Text>Square Footage: {surface}</Text>
+          <Text>Square Footage: {surface} ft</Text>
 
           <Slider
             type="range"
-            min="1"
-            max="1000000"
+            min="0"
+            max="100000"
+            step="10000"
             value={surface}
             onChange={(ev) => setSurface(ev.target.value)}
           />

@@ -1,25 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
-import houseData from "../../data/model";
 import { FaShower as Bathroom } from "react-icons/fa";
 import { RiHotelBedFill as Bedroom } from "react-icons/ri";
 import { RiPriceTag3Line as Price } from "react-icons/ri";
-const HouseCard = () => {
+const HouseCard = ({houseData}) => {
+
   return (
     <Wrapper>
       <Main>
         <Text>What we found for you: </Text>
       </Main>
       <List>
-        {houseData.map((house) => {
+        {houseData && houseData.map((house) => {
           return (
             <Card>
               <ImageDiv>
                 <Image src={house.src} />
               </ImageDiv>
               <SubDiv>
-                <TextDiv> {house.name}</TextDiv>
+                <TextDiv>
+                  <h3> {house.name} </h3>
+                </TextDiv>
                 <Details>
                   <DetailsDiv>
                     <Bathroom size={20} color={COLORS.secondary} />
@@ -47,19 +49,19 @@ const HouseCard = () => {
   );
 };
 
-
-
 const Wrapper = styled.div`
   width: 65vw;
 `;
 const Main = styled.div``;
-const TextDiv = styled.div``;
+const TextDiv = styled.div`
+  padding-left: 10px;
+`;
 const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow: auto;
-  height: 60vh;
+  height: 70vh;
   margin: 20px;
 `;
 const Text = styled.div`
@@ -71,14 +73,15 @@ const Card = styled.div`
   margin: 10px;
 `;
 const SubDiv = styled.div`
-  height: 15vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
 `;
 const Details = styled.div`
   display: flex;
   justify-content: space-evenly;
-  height: 7vh;
+  height: 10vh;
+  padding-top: 10px;
 `;
 const DetailsDiv = styled.div`
   display: flex;
@@ -98,6 +101,8 @@ const Button = styled.button`
   background-color: white;
   border-radius: 20px;
   font-weight: bolder;
+  height: 30px;
+  margin-bottom: 10px;
 `;
 
 const Number = styled.div``;
