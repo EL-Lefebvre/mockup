@@ -12,8 +12,7 @@ import Confirm from "../ConfirmPage/Confirm";
 import SideBar from "./SideBar";
 
 
-const Body = () => {
-  return (
+const Body = () =>  (
     <Wrapper>
       <SideBar />
       <Switch>
@@ -42,7 +41,7 @@ const Body = () => {
       </Switch>
     </Wrapper>
   );
-};
+
 
 const Wrapper = styled.div`
   display: flex;

@@ -5,8 +5,7 @@ import { FaHandsHelping as Meet } from "react-icons/fa";
 import Main from "../MainPage/Main";
 import { COLORS } from "../constants";
 
-const Meeting = () => {
-  return (
+const Meeting = () =>  (
     <Main
       title={"Meeting"}
       imageSrc={<Meet size={30} fill={`${COLORS.third}`} />}
@@ -16,7 +15,7 @@ const Meeting = () => {
       </Wrapper>
     </Main>
   );
-};
+
 const Wrapper = styled.div``;
 const Text = styled.h1``;
 export default Meeting;

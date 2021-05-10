@@ -4,8 +4,7 @@ import styled from "styled-components";
 import { COLORS } from "../constants";
 import Wave from "../../assets/wave.png";
 
-const Header = () => {
-  return (
+const Header = () =>(
     <Wrapper>
       <Logo>
         <h1>Logo</h1>
@@ -22,7 +21,7 @@ const Header = () => {
       </Name>
     </Wrapper>
   );
-};
+
 
 const Wrapper = styled.div`
   height: 10vh;

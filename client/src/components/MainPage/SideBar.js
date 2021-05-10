@@ -15,8 +15,6 @@ import { COLORS } from "../constants";
 const SideBar = () => {
   const history = useLocation();
 
-
-
   return (
     <Wrapper>
       <Main>

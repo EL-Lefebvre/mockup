@@ -4,8 +4,7 @@ import { FaMoneyBillAlt as BudgetLogo } from "react-icons/fa";
 
 import Main from "../MainPage/Main";
 
-const Budget = () => {
-  return (
+const Budget = () =>  (
     <Main
       title={"Your budget"}
       imageSrc={<BudgetLogo size={30} fill={"green"} />}
@@ -15,7 +14,7 @@ const Budget = () => {
       </Wrapper>
     </Main>
   );
-};
+
 const Wrapper = styled.div``;
 const Text = styled.h1``;
 export default Budget;

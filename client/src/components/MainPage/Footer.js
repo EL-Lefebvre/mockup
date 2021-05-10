@@ -3,14 +3,13 @@ import styled from "styled-components";
 
 import Logo from "../../assets/maket.png";
 
-const Footer = () => {
-  return (
+const Footer = () =>  (
     <Wrapper>
       <Text>Powered by</Text>
       <Image src={Logo} />
     </Wrapper>
   );
-};
+
 
 const Wrapper = styled.div`
   display: flex;
