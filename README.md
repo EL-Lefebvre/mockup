@@ -4,7 +4,7 @@ Website Link : https://maket-mockup.netlify.app/
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the `client` directory(`cd client`), you can run:
 
 ### `yarn start`
 
