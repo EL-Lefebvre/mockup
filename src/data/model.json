@@ -1,6 +1,7 @@
 [
   {
     "name": "M-001",
+    "liked": false,
     "nbr_bedrooms": 3,
     "nbr_bathrooms": 2,
     "surface": 3456,
@@ -9,6 +10,7 @@
   },
   {
     "name": "M-002",
+    "liked": false,
     "nbr_bedrooms": 1,
     "nbr_bathrooms": 1,
     "surface": 1006,
@@ -17,6 +19,7 @@
   },
   {
     "name": "M-003",
+    "liked": true,
     "nbr_bedrooms": 5,
     "nbr_bathrooms": 3,
     "surface": 34356,
@@ -25,6 +28,7 @@
   },
   {
     "name": "M-004",
+    "liked": false,
     "nbr_bedrooms": 2,
     "nbr_bathrooms": 2,
     "surface": 20356,
@@ -33,6 +37,7 @@
   },
   {
     "name": "M-005",
+    "liked": false,
     "nbr_bedrooms": 4,
     "nbr_bathrooms": 2,
     "surface": 12456,
@@ -41,6 +46,7 @@
   },
   {
     "name": "M-006",
+    "liked": false,
     "nbr_bedrooms": 3,
     "nbr_bathrooms": 2,
     "surface": 8456,

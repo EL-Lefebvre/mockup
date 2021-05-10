@@ -13,29 +13,17 @@ const ModelPage = () => {
   const [surface, setSurface] = useState(0);
   const [filteredData, setFilteredData] = useState([]);
 
+  // Adding all filters and returning selected results
   useEffect(() => {
     const filteredResults = houseData.filter(
-      (data) => bedrooms <= data.nbr_bedrooms
+      (data) =>
+        bedrooms <= data.nbr_bedrooms &&
+        bathrooms <= data.nbr_bathrooms &&
+        surface <= data.surface &&
+        price <= data.price
     );
     setFilteredData(filteredResults);
-  }, [bedrooms]);
-
-  useEffect(() => {
-    const filteredResults = houseData.filter(
-      (data) => bathrooms <= data.nbr_bathrooms
-    );
-    setFilteredData(filteredResults);
-  }, [bathrooms]);
-
-  useEffect(() => {
-    const filteredResults = houseData.filter((data) => surface <= data.surface);
-    setFilteredData(filteredResults);
-  }, [surface]);
-
-  useEffect(() => {
-    const filteredResults = houseData.filter((data) => price <= data.price);
-    setFilteredData(filteredResults);
-  }, [price]);
+  }, [price, surface, bathrooms, bedrooms]);
 
   return (
     <Main

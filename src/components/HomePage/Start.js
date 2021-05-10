@@ -2,24 +2,47 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
 import { FaHandsHelping as Meet } from "react-icons/fa";
+import People from "../../assets/people.webp";
 import { COLORS } from "../constants";
+import Popup from "reactjs-popup";
+import { useHistory } from "react-router-dom";
 const Start = () => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push("/needs");
+  };
   return (
-    <Wrapper>
-      <Starting>
+    <Popup defaultOpen position="top center" closeOnDocumentClick>
+      <Starting onClick={handleClick}>
         <Image>
-          <PopUpImage />
+          <PopUpImage src={People} />
         </Image>
         <TextArea>
-          <Text>helloooooo</Text>
+          <Text>Welcome</Text>
+          <h4>Let us help you find your dream house</h4>
+          <TinyText>
+            <Details>
+              <p>
+                Let us guide you step by step in the building of your new home.
+                We will help you make the right choices for your home from the
+                comfort of your living room.
+              </p>
+            </Details>
+            <Details>
+              <p>
+                The next 5 steps will help us understand your project and your
+                needs.
+              </p>
+            </Details>
+          </TinyText>
+
           <Button>Get Started</Button>
         </TextArea>
       </Starting>
-    </Wrapper>
+    </Popup>
   );
 };
 const Wrapper = styled.div`
-  background-color: gray;
   opacity: 0.5;
   width: 100%;
   height: 100vh;
@@ -28,25 +51,46 @@ const Wrapper = styled.div`
   justify-content: center;
   z-index: 2;
 `;
-const Text = styled.h1``;
+const Text = styled.h1`
+  border-bottom: 15px solid ${COLORS.primary};
+  width: 70px;
+  padding-bottom: 5px;
+`;
 const Starting = styled.div`
-  width: 600px;
-  height: 500px;
+  width: 60vw;
+  height: 83vh;
   opacity: 2;
   background-color: white;
   z-index: 3;
   display: flex;
+
+  margin-top: 20px;
 `;
 const Image = styled.div``;
-const PopUpImage = styled.div``;
-const TextArea = styled.div`
-  color: black;
+const PopUpImage = styled.img`
+  width: 25vw;
+  height: 100%;
 `;
+const TextArea = styled.div`
+  padding-left: 30px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 80vh;
+`;
+const TinyText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40vh;
+`;
+const Details = styled.div``;
 const Button = styled.button`
   border: 1px solid ${COLORS.primary};
   background-color: ${COLORS.primary};
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   height: 30px;
   width: 120px;
   display: flex;

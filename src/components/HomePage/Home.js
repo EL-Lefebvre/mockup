@@ -25,13 +25,27 @@ const Home = () => {
           </MainArea>
         </Wrapper>
       ) : (
-        <Start />
+        <PopWrapper>
+          <Start toggle={toggle} />
+        </PopWrapper>
       )}
     </>
   );
 };
+const PopWrapper = styled.div`
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  background-color: lightgray;
+`;
 const Wrapper = styled.div`
   top: 0;
+  animation: floatBubble 2s inifnate;
+ 
   &:hover {
     filter: invert(0.2);
   }
