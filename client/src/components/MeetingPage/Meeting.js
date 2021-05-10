@@ -1,21 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
-import { BiNotepad as NeedsLogo } from "react-icons/bi";
+import { FaHandsHelping as Meet } from "../../../client/node_modules/react-icons/fa";
 import { COLORS } from "../constants";
-const Needs = () => {
+const Meeting = () => {
   return (
     <Main
-      title={"Your needs"}
-      imageSrc={<NeedsLogo size={30} fill={`${COLORS.third}`} />}
+      title={"Meeting"}
+      imageSrc={<Meet size={30} fill={`${COLORS.third}`} />}
     >
       <Wrapper>
-        <Text>Hello</Text>
+        <Text>Let's make it happen!</Text>
       </Wrapper>
     </Main>
   );
 };
-
 const Wrapper = styled.div``;
 const Text = styled.h1``;
-export default Needs;
+export default Meeting;

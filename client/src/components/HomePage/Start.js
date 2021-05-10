@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
-import { FaHandsHelping as Meet } from "react-icons/fa";
+import { FaHandsHelping as Meet } from "../../../client/node_modules/react-icons/fa";
 import People from "../../assets/people.webp";
 import { COLORS } from "../constants";
-import Popup from "reactjs-popup";
+import Popup from "../../../client/node_modules/reactjs-popup";
 import { useHistory } from "react-router-dom";
 const Start = () => {
   const history = useHistory();
@@ -12,53 +12,44 @@ const Start = () => {
     history.push("/needs");
   };
   return (
-    <Popup defaultOpen position="top center" closeOnDocumentClick>
-      <Starting onClick={handleClick}>
-        <Image>
-          <PopUpImage src={People} />
-        </Image>
-        <TextArea>
-          <Text>Welcome</Text>
-          <h4>Let us help you find your dream house</h4>
-          <TinyText>
-            <Details>
-              <p>
-                Let us guide you step by step in the building of your new home.
-                We will help you make the right choices for your home from the
-                comfort of your living room.
-              </p>
-            </Details>
-            <Details>
-              <p>
-                The next 5 steps will help us understand your project and your
-                needs.
-              </p>
-            </Details>
-          </TinyText>
-
+    <Starting onClick={handleClick}>
+      <Image>
+        <PopUpImage src={People} />
+      </Image>
+      <TextArea>
+        <Text>Welcome</Text>
+        <h4>Let us help you find your dream house</h4>
+        <TinyText>
+          <Details>
+            <p>
+              Let us guide you step by step in the building of your new home. We
+              will help you make the right choices for your home from the
+              comfort of your living room.
+            </p>
+          </Details>
+          <Details>
+            <p>
+              The next 5 steps will help us understand your project and your
+              needs.
+            </p>
+          </Details>
+        </TinyText>
+        <ButtonArea>
           <Button>Get Started</Button>
-        </TextArea>
-      </Starting>
-    </Popup>
+        </ButtonArea>
+      </TextArea>
+    </Starting>
   );
 };
-const Wrapper = styled.div`
-  opacity: 0.5;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-`;
+
 const Text = styled.h1`
   border-bottom: 15px solid ${COLORS.primary};
   width: 70px;
   padding-bottom: 5px;
 `;
 const Starting = styled.div`
-  width: 60vw;
-  height: 83vh;
+  width: 50vw;
+  height: 75vh;
   opacity: 2;
   background-color: white;
   z-index: 3;
@@ -85,7 +76,13 @@ const TinyText = styled.div`
   justify-content: space-evenly;
   height: 40vh;
 `;
-const Details = styled.div``;
+const Details = styled.div`
+  font-size: 120%;
+`;
+const ButtonArea = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
 const Button = styled.button`
   border: 1px solid ${COLORS.primary};
   background-color: ${COLORS.primary};
@@ -96,5 +93,6 @@ const Button = styled.button`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 100%;
 `;
 export default Start;

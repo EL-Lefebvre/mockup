@@ -45,12 +45,13 @@ const Header = styled.div`
   justify-content: space-between;
 `;
 const Button = styled.button`
+  font-size: 110%;
   border: 1px solid ${COLORS.primary};
   background-color: ${COLORS.primary};
   color: white;
   border-radius: 10px;
-  height: 30px;
-  width: 120px;
+  height: 40px;
+  width: 140px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

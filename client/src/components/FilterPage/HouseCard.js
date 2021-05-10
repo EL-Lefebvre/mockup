@@ -7,6 +7,7 @@ import { RiPriceTag3Line as Price } from "react-icons/ri";
 import { MdLandscape as Surface } from "react-icons/md";
 import { GoHeart as Heart } from "react-icons/go";
 import SingleHouse from "./SingleHouse";
+import Popup from "reactjs-popup";
 const HouseCard = ({ filteredData }) => {
   const [toggle, setToggle] = useState(false);
   console.log(filteredData);
@@ -25,7 +26,7 @@ const HouseCard = ({ filteredData }) => {
         {filteredData &&
           filteredData.map((house) => {
             return (
-              <Card key={house.name} name={house.name}>
+              <Card key={house.name}>
                 <ImageDiv>
                   <Image src={house.src} />
                 </ImageDiv>
@@ -68,7 +69,14 @@ const HouseCard = ({ filteredData }) => {
                   </Details>
                   <ButtonDiv>
                     <Button>Select</Button>
-                    <Button onClick={handleSelect}>See Project</Button>
+                    <Popup
+                      trigger={<Button>See Project</Button>}
+                      position="top left"
+                      closeOnDocumentClick
+                    >
+                      <SingleHouse name={house.name} />
+                    </Popup>
+
                     <ButtonHeart onClick={() => setToggle(!toggle)}>
                       {house.liked ? (
                         <Heart size={30} color={"red"} />

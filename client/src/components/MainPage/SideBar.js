@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { COLORS } from "../constants";
 import { NavLink } from "react-router-dom";
-import { BiCalendarCheck as Start } from "react-icons/bi";
-import { BiNotepad as Needs } from "react-icons/bi";
-import { FaMoneyBillAlt as Budget } from "react-icons/fa";
-import { IoLocationSharp as Location } from "react-icons/io5";
-import { BsHouseFill as Home } from "react-icons/bs";
-import { FaHandsHelping as Meet } from "react-icons/fa";
-import { GiPartyPopper as Done } from "react-icons/gi";
+import { BiCalendarCheck as Start } from "../../../client/node_modules/react-icons/bi";
+import { BiNotepad as Needs } from "../../../client/node_modules/react-icons/bi";
+import { FaMoneyBillAlt as Budget } from "../../../client/node_modules/react-icons/fa";
+import { IoLocationSharp as Location } from "../../../client/node_modules/react-icons/io5";
+import { BsHouseFill as Home } from "../../../client/node_modules/react-icons/bs";
+import { FaHandsHelping as Meet } from "../../../client/node_modules/react-icons/fa";
+import { GiPartyPopper as Done } from "../../../client/node_modules/react-icons/gi";
 
 const SideBar = () => {
   const history = useLocation();
@@ -24,7 +24,12 @@ const SideBar = () => {
     <Wrapper>
       <Main>
         <List>
-          <Nav to="/">
+          <Nav
+            to="/"
+            style={{
+              color: history.pathname === "/" ? `${COLORS.third}` : "black",
+            }}
+          >
             <Start size={30} />
           </Nav>
         </List>

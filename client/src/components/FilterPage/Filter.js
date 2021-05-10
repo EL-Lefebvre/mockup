@@ -78,11 +78,13 @@ const List = styled.li`
 `;
 const Text = styled.div`
   padding-bottom: 10px;
-  font-size: 100%;
+
+  font-size: 110%;
 `;
 const Slider = styled.input`
   -webkit-appearance: none;
   -webkit-slider-thumb: none;
+
   &::-webkit-slider-runnable-track {
     background: #b5b1e0;
     height: 2px;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
-import { FaMoneyBillAlt as BudgetLogo } from "react-icons/fa";
+import { FaMoneyBillAlt as BudgetLogo } from "../../../client/node_modules/react-icons/fa";
 const Budget = () => {
   return (
     <Main

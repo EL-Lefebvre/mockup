@@ -4,6 +4,7 @@ import Landing from "../../assets/landing.webp";
 import Maket from "../../assets/maket.png";
 import { useHistory } from "react-router-dom";
 import Start from "./Start";
+import Popup from "../../../client/node_modules/reactjs-popup";
 const Home = () => {
   const [toggle, setToggle] = useState(false);
   const history = useHistory();
@@ -26,7 +27,9 @@ const Home = () => {
         </Wrapper>
       ) : (
         <PopWrapper>
-          <Start toggle={toggle} />
+          <Popup defaultOpen position="top center" closeOnDocumentClick>
+            <Start toggle={toggle} />
+          </Popup>
         </PopWrapper>
       )}
     </>
@@ -36,6 +39,7 @@ const PopWrapper = styled.div`
   opacity: 0.5;
   width: 100%;
   height: 100vh;
+
   position: absolute;
   display: flex;
   justify-content: center;
@@ -45,7 +49,7 @@ const PopWrapper = styled.div`
 const Wrapper = styled.div`
   top: 0;
   animation: floatBubble 2s inifnate;
- 
+
   &:hover {
     filter: invert(0.2);
   }
