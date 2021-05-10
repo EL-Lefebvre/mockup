@@ -4,7 +4,7 @@ import Landing from "../../assets/landing.webp";
 import Maket from "../../assets/maket.png";
 import { useHistory } from "react-router-dom";
 import Start from "./Start";
-import Popup from "../../../client/node_modules/reactjs-popup";
+import Popup from "reactjs-popup";
 const Home = () => {
   const [toggle, setToggle] = useState(false);
   const history = useHistory();
