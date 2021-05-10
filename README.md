@@ -1,7 +1,8 @@
 # Maket Mockup website
 
-Website Link : https://maket-mockup.netlify.app/
+Netlify Link : https://maket-mockup.netlify.app/
 
+![Screen Shot 2021-05-10 at 3 13 47 PM](https://user-images.githubusercontent.com/67484805/117712539-77f07e00-b1a2-11eb-8f63-0ae640d17edf.png)
 ## Available Scripts
 
 In the `client` directory - [ `cd client` ], 
