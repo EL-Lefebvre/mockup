@@ -9,12 +9,8 @@ import { GoHeart as Heart } from "react-icons/go";
 import SingleHouse from "./SingleHouse";
 import Popup from "reactjs-popup";
 const HouseCard = ({ filteredData }) => {
-  const [toggle, setToggle] = useState(false);
-  console.log(filteredData);
+  const [isLiked, setIsLiked] = useState(false);
 
-  const handleSelect = () => {
-    console.log("hello");
-  };
   return (
     <Wrapper>
       <Main>
@@ -69,15 +65,22 @@ const HouseCard = ({ filteredData }) => {
                   </Details>
                   <ButtonDiv>
                     <Button>Select</Button>
-                    <Popup
-                      trigger={<Button>See Project</Button>}
-                      position="top left"
+                    <StyledPopup
+                      modal
+                      trigger={
+                        <Button onClick={() => setIsLiked(!isLiked)}>
+                          See Project
+                        </Button>
+                      }
+                      position="top center"
+                      closeBtn={true}
                       closeOnDocumentClick
+                      color="blue"
                     >
                       <SingleHouse name={house.name} />
-                    </Popup>
+                    </StyledPopup>
 
-                    <ButtonHeart onClick={() => setToggle(!toggle)}>
+                    <ButtonHeart onClick={() => setIsLiked(!isLiked)}>
                       {house.liked ? (
                         <Heart size={30} color={"red"} />
                       ) : (
@@ -142,6 +145,17 @@ const DetailsDiv = styled.div`
   justify-content: space-evenly;
   margin: 10px;
   height: 20px;
+`;
+
+const StyledPopup = styled(Popup)`
+  // use your custom style for ".popup-overlay"
+  &-overlay {
+    width: 100%;
+    height: 100%;
+  }
+  &-content {
+    width: 30vw;
+  }
 `;
 const ImageDiv = styled.div`
   min-width: 15vw;

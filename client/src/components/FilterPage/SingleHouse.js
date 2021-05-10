@@ -2,16 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 import houseData from "../../data/model";
-
+import "reactjs-popup/dist/index.css";
 import { FaShower as Bathroom } from "react-icons/fa";
 import { RiHotelBedFill as Bedroom } from "react-icons/ri";
 import { RiPriceTag3Line as Price } from "react-icons/ri";
 import { MdLandscape as Surface } from "react-icons/md";
+import FirstBluePrint from "../../assets/blueprintone.gif";
+import SecondBluePrint from "../../assets/blueprinttwo.gif";
 const SingleHouse = ({ name }) => {
   const singleData = houseData.filter((data) => data.name === name);
   console.log(singleData);
   return (
-    <Wrapper>
+    <MainArea>
       {singleData &&
         singleData.map((house) => {
           return (
@@ -55,25 +57,34 @@ const SingleHouse = ({ name }) => {
                   </DetailsDiv>
                 </div>
               </Details>
+              <BluePrint>
+                <Print src={FirstBluePrint} />
+                <Print src={SecondBluePrint} />
+              </BluePrint>
             </Main>
           );
         })}
-    </Wrapper>
+    </MainArea>
   );
 };
-const Wrapper = styled.div`
+
+const MainArea = styled.div`
   background-color: white;
-  width: 40vw;
-  height: 60vh;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 `;
 const Main = styled.div``;
-const MainTitle = styled.div``;
+const MainTitle = styled.div`
+display:flex;
+justify-content:center;
+background-color: #fdf7ef;
+`;
 
 const List = styled.div``;
 const Text = styled.div``;
 const ImageDiv = styled.div``;
 const Image = styled.img`
-  height: 500px;
+  width: 30vw;
+  height: 40vh;
 `;
 
 const Details = styled.div`
@@ -94,4 +105,13 @@ const Number = styled.div`
   padding-left: 10px;
 `;
 const Icon = styled.div``;
+
+const BluePrint = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+const Print = styled.img`
+  height: 15vh;
+  width: 10vw;
+`;
 export default SingleHouse;

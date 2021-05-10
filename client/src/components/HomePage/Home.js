@@ -5,6 +5,7 @@ import Maket from "../../assets/maket.png";
 import { useHistory } from "react-router-dom";
 import Start from "./Start";
 import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 const Home = () => {
   const [toggle, setToggle] = useState(false);
   const history = useHistory();
@@ -27,24 +28,31 @@ const Home = () => {
         </Wrapper>
       ) : (
         <PopWrapper>
-          <Popup defaultOpen position="top center" closeOnDocumentClick>
+          <StyledPopup
+            modal
+            defaultOpen
+            position="top center"
+            closeOnDocumentClick
+          >
             <Start toggle={toggle} />
-          </Popup>
+          </StyledPopup>
         </PopWrapper>
       )}
     </>
   );
 };
-const PopWrapper = styled.div`
-  opacity: 0.5;
-  width: 100%;
-  height: 100vh;
-
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  background-color: lightgray;
+const PopWrapper = styled.div``;
+const StyledPopup = styled(Popup)`
+  // use your custom style for ".popup-overlay"
+  &-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  &-content {
+    opacity: 1;
+    background-color: white;
+  }
 `;
 const Wrapper = styled.div`
   top: 0;
@@ -76,11 +84,13 @@ const MainArea = styled.div`
   z-index: 3;
 `;
 const Logo = styled.img`
-  height: 200px;
-  width: 230px;
+  height: 320px;
+  width: 370px;
   filter: brightness(0) invert(1);
 `;
-const Text = styled.div``;
+const Text = styled.div`
+  z-index: 4;
+`;
 const Title = styled.h1`
   color: white;
 `;

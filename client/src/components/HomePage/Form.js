@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
 import { FaHandsHelping as Meet } from "react-icons/fa";
-import People from "../../assets/people.webp";
+import Man from "../../assets/thumbsup.webp";
 import { COLORS } from "../constants";
 import Popup from "reactjs-popup";
 import { useHistory } from "react-router-dom";
@@ -14,24 +14,20 @@ const Start = () => {
   return (
     <Starting onClick={handleClick}>
       <Image>
-        <PopUpImage src={People} />
+        <PopUpImage src={Man} />
       </Image>
       <TextArea>
-        <Text>Welcome</Text>
-        <h4>Let us help you find your dream house</h4>
+        <Text>Get Started</Text>
+       
         <TinyText>
           <Details>
-            <p>
-              Let us guide you step by step in the building of your new home. We
-              will help you make the right choices for your home from the
-              comfort of your living room.
-            </p>
+         <Input type="text"/>
           </Details>
           <Details>
-            <p>
-              The next 5 steps will help us understand your project and your
-              needs.
-            </p>
+         <Input type="text"/>
+          </Details>
+          <Details>
+         <Input type="text"/>
           </Details>
         </TinyText>
         <ButtonArea>
@@ -42,24 +38,25 @@ const Start = () => {
   );
 };
 
-const Starting = styled.div`
-  width: 50vw;
-  height: 75vh;
-  opacity: 2;
-
-  display: flex;
-`;
-const Image = styled.div`
-
-`;
-const PopUpImage = styled.img`
-  width: 25vw;
-  height: 100%;
-`;
 const Text = styled.h1`
   border-bottom: 15px solid ${COLORS.primary};
   width: 70px;
   padding-bottom: 5px;
+`;
+const Starting = styled.div`
+  width: 50vw;
+  height: 75vh;
+  opacity: 2;
+  background-color: white;
+  z-index: 3;
+  display: flex;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  margin-top: 20px;
+`;
+const Image = styled.div``;
+const PopUpImage = styled.img`
+  width: 25vw;
+  height: 100%;
 `;
 const TextArea = styled.div`
   padding-left: 30px;
@@ -69,11 +66,13 @@ const TextArea = styled.div`
   width: 300px;
   height: 80vh;
 `;
-const TinyText = styled.div`
+const TinyText = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 40vh;
+`;
+const Input = styled.div`
 `;
 const Details = styled.div`
   font-size: 120%;
