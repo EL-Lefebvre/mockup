@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
-import { FaHandsHelping as Meet } from "../../../client/node_modules/react-icons/fa";
+import { FaHandsHelping as Meet } from "react-icons/fa";
 import { COLORS } from "../constants";
 const Meeting = () => {
   return (

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Main from "../MainPage/Main";
-import { FaHandsHelping as Meet } from "../../../client/node_modules/react-icons/fa";
+import { FaHandsHelping as Meet } from "react-icons/fa";
 import People from "../../assets/people.webp";
 import { COLORS } from "../constants";
-import Popup from "../../../client/node_modules/reactjs-popup";
+import Popup from "reactjs-popup";
 import { useHistory } from "react-router-dom";
 const Start = () => {
   const history = useHistory();
