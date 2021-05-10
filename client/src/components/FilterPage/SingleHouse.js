@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../constants";
-import houseData from "../../data/model";
 import "reactjs-popup/dist/index.css";
 import { FaShower as Bathroom } from "react-icons/fa";
 import { RiHotelBedFill as Bedroom } from "react-icons/ri";
 import { RiPriceTag3Line as Price } from "react-icons/ri";
 import { MdLandscape as Surface } from "react-icons/md";
+
+import { COLORS } from "../constants";
+import houseData from "../../data/model";
 import FirstBluePrint from "../../assets/blueprintone.gif";
 import SecondBluePrint from "../../assets/blueprinttwo.gif";
+
 const SingleHouse = ({ name }) => {
   const singleData = houseData.filter((data) => data.name === name);
-  console.log(singleData);
+
   return (
     <MainArea>
       {singleData &&
@@ -74,9 +76,9 @@ const MainArea = styled.div`
 `;
 const Main = styled.div``;
 const MainTitle = styled.div`
-display:flex;
-justify-content:center;
-background-color: #fdf7ef;
+  display: flex;
+  justify-content: center;
+  background-color: #fdf7ef;
 `;
 
 const List = styled.div``;

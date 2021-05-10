@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { COLORS } from "../constants";
+import Popup from "reactjs-popup";
 import { FaShower as Bathroom } from "react-icons/fa";
 import { RiHotelBedFill as Bedroom } from "react-icons/ri";
 import { RiPriceTag3Line as Price } from "react-icons/ri";
 import { MdLandscape as Surface } from "react-icons/md";
 import { GoHeart as Heart } from "react-icons/go";
+
+import { COLORS } from "../constants";
 import SingleHouse from "./SingleHouse";
-import Popup from "reactjs-popup";
+
 const HouseCard = ({ filteredData }) => {
   const [isLiked, setIsLiked] = useState(false);
 

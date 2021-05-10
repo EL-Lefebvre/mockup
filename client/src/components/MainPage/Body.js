@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Switch, Route } from "react-router-dom";
+
 import Home from "../HomePage/Home";
 import Needs from "../NeedsPage/Needs";
 import Budget from "../BudgetPage/Budget";
@@ -9,8 +10,8 @@ import ModelPage from "../FilterPage/ModelPage";
 import Meeting from "../MeetingPage/Meeting";
 import Confirm from "../ConfirmPage/Confirm";
 import SideBar from "./SideBar";
-import Main from "./Main";
-import Footer from "./Footer";
+
+
 const Body = () => {
   return (
     <Wrapper>

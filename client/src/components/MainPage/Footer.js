@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import Logo from "../../assets/maket.png";
+
 const Footer = () => {
   return (
     <Wrapper>

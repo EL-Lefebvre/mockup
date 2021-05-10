@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import { COLORS } from "../constants";
+
 const Filter = ({
   price,
   setPrice,
@@ -10,8 +12,7 @@ const Filter = ({
   setBedrooms,
   surface,
   setSurface,
-}) => {
-  return (
+}) => (
     <Wrapper>
       <Main>
         <List>
@@ -63,7 +64,7 @@ const Filter = ({
       </Main>
     </Wrapper>
   );
-};
+
 const Wrapper = styled.div`
   margin: 10px;
 `;

@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import { COLORS } from "../constants";
 import Wave from "../../assets/wave.png";
+
 const Header = () => {
   return (
     <Wrapper>

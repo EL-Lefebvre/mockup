@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Landing from "../../assets/landing.webp";
-import Maket from "../../assets/maket.png";
 import { useHistory } from "react-router-dom";
-import Start from "./Start";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+
+import Start from "./Start";
+import Landing from "../../assets/landing.webp";
+import Maket from "../../assets/maket.png";
+
 const Home = () => {
   const [toggle, setToggle] = useState(false);
   const history = useHistory();

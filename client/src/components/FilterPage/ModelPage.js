@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { BsHouseFill as Home } from "react-icons/bs";
+
 import HouseCard from "./HouseCard";
 import Filter from "./Filter";
 import houseData from "../../data/model";
-import { BsHouseFill as Home } from "react-icons/bs";
 import Main from "../MainPage/Main";
 import { COLORS } from "../constants";
+
 const ModelPage = () => {
   const [price, setPrice] = useState(0);
   const [bathrooms, setBathrooms] = useState(0);

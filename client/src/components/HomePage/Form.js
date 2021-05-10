@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Main from "../MainPage/Main";
 import { FaHandsHelping as Meet } from "react-icons/fa";
-import Man from "../../assets/thumbsup.webp";
-import { COLORS } from "../constants";
-import Popup from "reactjs-popup";
 import { useHistory } from "react-router-dom";
+import Popup from "reactjs-popup";
+
+import { COLORS } from "../constants";
+import Man from "../../assets/thumbsup.webp";
+import Main from "../MainPage/Main";
+
 const Start = () => {
   const history = useHistory();
   const handleClick = () => {
@@ -18,16 +20,16 @@ const Start = () => {
       </Image>
       <TextArea>
         <Text>Get Started</Text>
-       
+
         <TinyText>
           <Details>
-         <Input type="text"/>
+            <Input type="text" />
           </Details>
           <Details>
-         <Input type="text"/>
+            <Input type="text" />
           </Details>
           <Details>
-         <Input type="text"/>
+            <Input type="text" />
           </Details>
         </TinyText>
         <ButtonArea>
@@ -72,8 +74,7 @@ const TinyText = styled.form`
   justify-content: space-evenly;
   height: 40vh;
 `;
-const Input = styled.div`
-`;
+const Input = styled.div``;
 const Details = styled.div`
   font-size: 120%;
 `;

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
-import { COLORS } from "../constants";
 import { NavLink } from "react-router-dom";
 import { BiCalendarCheck as Start } from "react-icons/bi";
 import { BiNotepad as Needs } from "react-icons/bi";
@@ -11,15 +10,13 @@ import { BsHouseFill as Home } from "react-icons/bs";
 import { FaHandsHelping as Meet } from "react-icons/fa";
 import { GiPartyPopper as Done } from "react-icons/gi";
 
+import { COLORS } from "../constants";
+
 const SideBar = () => {
   const history = useLocation();
-  console.log(history.pathname);
-  const [toggle, setToggle] = useState(false);
 
-  useEffect(() => {
-    const path = history.pathname;
-  }, [history]);
-  console.log(toggle);
+
+
   return (
     <Wrapper>
       <Main>

@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Main from "../MainPage/Main";
 import { IoLocationSharp as Location } from "react-icons/io5";
+
+import Main from "../MainPage/Main";
+
 const Lands = () => {
   return (
     <Main title={"Our Lands"} imageSrc={<Location size={30} fill={"red"} />}>
