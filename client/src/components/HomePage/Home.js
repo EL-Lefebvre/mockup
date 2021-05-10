@@ -24,7 +24,12 @@ const Home = () => {
           <MainArea>
             <Logo src={Maket} />
             <Text>
-              <Title>Home building, simplified.</Title>
+              <div>
+                <h1>Home building, simplified.</h1>
+              </div>
+              <div>
+                <h3>Click anywhere to start</h3>
+              </div>
             </Text>
           </MainArea>
         </Wrapper>
@@ -84,6 +89,7 @@ const MainArea = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 3;
+  color: white;
 `;
 const Logo = styled.img`
   height: 320px;
@@ -92,8 +98,11 @@ const Logo = styled.img`
 `;
 const Text = styled.div`
   z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  align-items: center;
 `;
-const Title = styled.h1`
-  color: white;
-`;
+
 export default Home;

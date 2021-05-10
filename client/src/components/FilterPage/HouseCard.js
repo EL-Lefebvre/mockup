@@ -54,7 +54,7 @@ const HouseCard = ({ filteredData }) => {
                           {" "}
                           <Price size={20} color={COLORS.secondary} />
                         </Icon>
-                        <Number>{house.price}</Number>
+                        <Number>{house.price} $</Number>
                       </DetailsDiv>
                       <DetailsDiv>
                         <Icon>
